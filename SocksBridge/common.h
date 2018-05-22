@@ -6,6 +6,7 @@
 #include<boost/asio/ip/address.hpp>
 #include<boost/asio/io_service.hpp>
 #include<boost/shared_array.hpp>
+#include<iostream>
 namespace seraphim {
 using std::string;
 using std::shared_ptr;

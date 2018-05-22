@@ -4,26 +4,28 @@ namespace seraphim {
 
 	void SocksSession::start()
 	{
-
-		self_ = shared_from_this();
 		auto self = shared_from_this();
-		l_sock_.async_read_some(buffer(rbuf_, 257), std::bind(&SocksSession::handshake_type, this, std::placeholders::_1, std::placeholders::_2));
+
+		l_sock_.async_read_some(buffer(rbuf_, 257), std::bind(&SocksSession::handshake_type, this,self, std::placeholders::_1, std::placeholders::_2));
 	}
 
 	void SocksSession::blast(const error_code& ec)
 	{
-		l_sock_.close();
-		r_sock_.close();
-		self_ = nullptr;
+		//if (self_.get() != nullptr) {
+		//	std::cout << ec.message() << std::endl;
+		//	l_sock_.close();
+		//	r_sock_.close();
+		//	self_ = nullptr;
+
+		//}
 	}
 
-	void SocksSession::handshake_type(const error_code& ec, size_t len)
+	void SocksSession::handshake_type(shared_ptr<SocksSession> self, const error_code& ec, size_t len)
 	{
 		if (ec) {
 			blast(ec);
 		}
 		else {
-			auto self = shared_from_this();
 			shared_array<uint8_t> sbuf(new uint8_t[2]);
 			ByteOStream o(sbuf.get(), 2);
 			o.putN<uint16_t>(0x0500);
@@ -51,10 +53,10 @@ namespace seraphim {
 							break;
 						}
 						if (atype_ == 1) {
-							l_sock_.async_receive(buffer(rbuf_, 4), std::bind(&SocksSession::handshake_ipv4, this, std::placeholders::_1, std::placeholders::_2));
+							l_sock_.async_receive(buffer(rbuf_, 4), std::bind(&SocksSession::handshake_ipv4, this,self, std::placeholders::_1, std::placeholders::_2));
 						}
 						else if (atype_ == 3) {
-							l_sock_.async_receive(buffer(rbuf_, 1), std::bind(&SocksSession::handshake_host, this, std::placeholders::_1, std::placeholders::_2));
+							l_sock_.async_receive(buffer(rbuf_, 1), std::bind(&SocksSession::handshake_host, this,self, std::placeholders::_1, std::placeholders::_2));
 						}
 						else {
 							error_code atype_err;
@@ -68,7 +70,7 @@ namespace seraphim {
 		}
 	}
 
-	void SocksSession::handshake_ipv4(const error_code& ec, size_t len)
+	void SocksSession::handshake_ipv4(shared_ptr<SocksSession> self,const error_code& ec, size_t len)
 	{
 		if (ec) {
 			blast(ec);
@@ -79,13 +81,13 @@ namespace seraphim {
 			}
 			ByteIStream  iBuf(rbuf_, len);
 			dst_ip_ = iBuf.getN<uint32_t>();
-			l_sock_.async_receive(buffer(rbuf_, 2), std::bind(&SocksSession::handshake_port, this, std::placeholders::_1, std::placeholders::_2));
+			l_sock_.async_receive(buffer(rbuf_, 2), std::bind(&SocksSession::handshake_port, this,self, std::placeholders::_1, std::placeholders::_2));
 		}
 
 
 	}
 
-	void SocksSession::handshake_host(const error_code& ec, size_t len)
+	void SocksSession::handshake_host(shared_ptr<SocksSession> self,const error_code& ec, size_t len)
 	{
 		//LOG_DEBUG << this << "{handshake_host}";
 		if (ec) {
@@ -99,7 +101,7 @@ namespace seraphim {
 			ByteIStream iBuf(rbuf_, len);
 			uint8_t len = iBuf.getN<uint8_t>();
 			iBuf.reset();
-			l_sock_.async_receive(buffer(rbuf_, len), [this](const error_code& ec, size_t len) {
+			l_sock_.async_receive(buffer(rbuf_, len), [self,this](const error_code& ec, size_t len) {
 				if (ec) {
 					blast(ec);
 				}
@@ -108,7 +110,7 @@ namespace seraphim {
 					dst_host_ = string(szbuf, szbuf + len);
 					ip::tcp::resolver::query q(dst_host_, "http");
 					shared_ptr<ip::tcp::resolver> resolver(new ip::tcp::resolver(l_sock_.get_io_service()));
-					resolver->async_resolve(q, std::bind(&SocksSession::handshake_resolve, this, resolver, std::placeholders::_1, std::placeholders::_2));
+					resolver->async_resolve(q, std::bind(&SocksSession::handshake_resolve, this,self, resolver, std::placeholders::_1, std::placeholders::_2));
 				}
 			});
 		}
@@ -116,7 +118,7 @@ namespace seraphim {
 
 	}
 
-	void SocksSession::handshake_resolve(shared_ptr<ip::tcp::resolver> resolver, const error_code& ec, ip::tcp::resolver::iterator itr)
+	void SocksSession::handshake_resolve(shared_ptr<SocksSession> self,shared_ptr<ip::tcp::resolver> resolver, const error_code& ec, ip::tcp::resolver::iterator itr)
 	{
 
 		//LOG_DEBUG << this << "{handshake_resolve}";
@@ -143,12 +145,12 @@ namespace seraphim {
 				blast(not_v4_error);
 				return;
 			}
-			l_sock_.async_receive(buffer(rbuf_, 2), std::bind(&SocksSession::handshake_port, this, std::placeholders::_1, std::placeholders::_2));
+			l_sock_.async_receive(buffer(rbuf_, 2), std::bind(&SocksSession::handshake_port, this,self, std::placeholders::_1, std::placeholders::_2));
 		}
 
 	}
 
-	void SocksSession::handshake_port(const error_code& ec, size_t len)
+	void SocksSession::handshake_port(shared_ptr<SocksSession> self,const error_code& ec, size_t len)
 	{
 		//LOG_DEBUG << this << "{handshake_port}";
 		if (ec) {
@@ -158,43 +160,89 @@ namespace seraphim {
 			ByteIStream  iBuf(rbuf_, len);
 			dst_port_ = iBuf.getN<uint16_t>();
 		}
-		ip::address_v4(dst_ip_);
 		dst = endpoint(ip::address_v4(dst_ip_), dst_port_);
-		r_sock_.async_connect(dst , [this](const error_code& ec) {
+		std::cout << "connect dest server " << dst << std::endl;
+		r_sock_.async_connect(dst, [self,this](const error_code& ec) {
 			if (ec) {
 				blast(ec);
 			}
 			else {
-				traffic();
+				traffic(self);
 			}
 		});
 
 	}
 
-	void SocksSession::traffic()
-	{
-		l_sock_.async_receive(boost::asio::buffer(lbuf_, max_buf), bind(&SocksSession::lr_handler,this,std::placeholders::_1,std::placeholders::_2));
-		r_sock_.async_receive(boost::asio::buffer(rbuf_, max_buf), bind(&SocksSession::rr_handler,this,std::placeholders::_1,std::placeholders::_2));
+	void SocksSession::traffic(shared_ptr<SocksSession> self)
+{
+
+		shared_array<uint8_t> buf(new uint8_t[10]);
+		ByteOStream oBuf(buf.get(), 10);
+		oBuf.reset();
+		oBuf.putN<uint32_t>(0x05000001);
+		auto local_point_ = l_sock_.local_endpoint();
+		oBuf.putN<uint32_t>((uint32_t)local_point_.address().to_v4().to_ulong());
+		oBuf.putN<uint16_t>(local_point_.port());
+		try {
+			l_sock_.async_send(buffer(buf.get(), 10), [this,self](const error_code& ec, size_t size) {
+				if (ec) {
+				}
+				else {
+
+					l_sock_.async_read_some(boost::asio::buffer(lbuf_, max_buf), bind(&SocksSession::lr_handler, this,self, std::placeholders::_1, std::placeholders::_2));
+					r_sock_.async_read_some(boost::asio::buffer(rbuf_, max_buf), bind(&SocksSession::rr_handler, this, self, std::placeholders::_1, std::placeholders::_2));
+				}
+			});
+		}
+		catch (...) {
+			//LOG_ERROR << this << "{connected_except}";
+		}
+
+
+
 	}
 
-	void SocksSession::lr_handler(const error_code& ec, size_t size)
+	void SocksSession::lr_handler(shared_ptr<SocksSession> self,const error_code& ec, size_t size)
 	{
+		if (ec) {
+			blast(ec);
+		}
+		else {
+			boost::asio::async_write(r_sock_, boost::asio::buffer(lbuf_, size), bind(&SocksSession::rs_handler, this, self , std::placeholders::_1, std::placeholders::_2));
 
+		}
 	}
 
-	void SocksSession::rr_handler(const error_code& ec, size_t size)
+	void SocksSession::rr_handler(shared_ptr<SocksSession>self,const error_code& ec, size_t size)
 	{
+		if (ec) {
+			blast(ec);
+		}
+		else {
 
+			boost::asio::async_write(l_sock_, boost::asio::buffer(rbuf_, size), bind(&SocksSession::ls_handler, this,self, std::placeholders::_1, std::placeholders::_2));
+		}
 	}
 
-	void SocksSession::ls_handler(const error_code& ec, size_t size)
+	void SocksSession::ls_handler(shared_ptr<SocksSession>self,const error_code& ec, size_t size)
 	{
+		if (ec) {
+			blast(ec);
+		}
+		else {
 
+			r_sock_.async_read_some(boost::asio::buffer(rbuf_, max_buf), bind(&SocksSession::rr_handler, this,self, std::placeholders::_1, std::placeholders::_2));
+		}
 	}
 
-	void SocksSession::rs_handler(const error_code& ec, size_t size)
+	void SocksSession::rs_handler(shared_ptr<SocksSession> self,const error_code& ec, size_t size)
 	{
-
+		if (ec) {
+			blast(ec);
+		}
+		else {
+			l_sock_.async_read_some(boost::asio::buffer(lbuf_, max_buf), bind(&SocksSession::lr_handler, this,self, std::placeholders::_1, std::placeholders::_2));
+		}
 	}
 
 };
