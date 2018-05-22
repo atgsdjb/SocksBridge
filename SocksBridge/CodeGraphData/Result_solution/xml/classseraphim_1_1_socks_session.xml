@@ -1,0 +1,353 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classseraphim_1_1_socks_session" kind="class" prot="public">
+    <compoundname>seraphim::SocksSession</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::enable_shared_from_this&lt; SocksSession &gt;</basecompoundref>
+    <includes refid="socks__session_8h" local="no">socks_session.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classseraphim_1_1_socks_session_1ae0644647de7c5471fbe34eae24b9c507" prot="private" static="no" mutable="no">
+        <type>ip::tcp::socket</type>
+        <definition>ip::tcp::socket seraphim::SocksSession::l_sock_</definition>
+        <argsstring></argsstring>
+        <name>l_sock_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/socks_session.h" line="29" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/socks_session.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="classseraphim_1_1_socks_session_1a1d4a5a74631f042a758d9450460d71c1" compoundref="socks__session_8cpp" startline="12" endline="17">band</referencedby>
+        <referencedby refid="classseraphim_1_1_socks_session_1a415588a3e1366e3404a18754802207fd" compoundref="socks__session_8cpp" startline="19" endline="69">handshake_type</referencedby>
+        <referencedby refid="classseraphim_1_1_socks_session_1a0fc90f353862f64c3044d2a5b80ac86f" compoundref="socks__session_8cpp" startline="4" endline="10">traffic</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classseraphim_1_1_socks_session_1ae00e15d3bb88bb868821961788443c9b" prot="private" static="no" mutable="no">
+        <type>ip::tcp::socket</type>
+        <definition>ip::tcp::socket seraphim::SocksSession::r_sock_</definition>
+        <argsstring></argsstring>
+        <name>r_sock_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/socks_session.h" line="31" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/socks_session.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="classseraphim_1_1_socks_session_1a1d4a5a74631f042a758d9450460d71c1" compoundref="socks__session_8cpp" startline="12" endline="17">band</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classseraphim_1_1_socks_session_1a21f1128604870fb25ef3672533cf6a1a" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t seraphim::SocksSession::rbuf_[4096]</definition>
+        <argsstring>[4096]</argsstring>
+        <name>rbuf_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/socks_session.h" line="32" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/socks_session.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="classseraphim_1_1_socks_session_1a415588a3e1366e3404a18754802207fd" compoundref="socks__session_8cpp" startline="19" endline="69">handshake_type</referencedby>
+        <referencedby refid="classseraphim_1_1_socks_session_1a0fc90f353862f64c3044d2a5b80ac86f" compoundref="socks__session_8cpp" startline="4" endline="10">traffic</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classseraphim_1_1_socks_session_1a082ef0bf714bc5fd933baa7a4902acf0" prot="private" static="no" mutable="no">
+        <type>shared_ptr&lt; <ref refid="classseraphim_1_1_socks_session" kindref="compound">SocksSession</ref> &gt;</type>
+        <definition>shared_ptr&lt;SocksSession&gt; seraphim::SocksSession::self_</definition>
+        <argsstring></argsstring>
+        <name>self_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/socks_session.h" line="33" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/socks_session.h" bodystart="33" bodyend="-1"/>
+        <referencedby refid="classseraphim_1_1_socks_session_1a1d4a5a74631f042a758d9450460d71c1" compoundref="socks__session_8cpp" startline="12" endline="17">band</referencedby>
+        <referencedby refid="classseraphim_1_1_socks_session_1a0fc90f353862f64c3044d2a5b80ac86f" compoundref="socks__session_8cpp" startline="4" endline="10">traffic</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classseraphim_1_1_socks_session_1a54cf23bd5994c6cd01b4642e55d6721e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>seraphim::SocksSession::SocksSession</definition>
+        <argsstring>(socket &amp;&amp;sock, endpoint dst_end)</argsstring>
+        <name>SocksSession</name>
+        <param>
+          <type><ref refid="namespaceseraphim_1a98076410a07d2454c5f735f83cdc0552" kindref="member">socket</ref> &amp;&amp;</type>
+          <declname>sock</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceseraphim_1a039abc666dcc43b519445191a75f5156" kindref="member">endpoint</ref></type>
+          <declname>dst_end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/socks_session.h" line="8" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/socks_session.h" bodystart="8" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classseraphim_1_1_socks_session_1a33d6e44934be12996bf9861353e7d1d8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>seraphim::SocksSession::SocksSession</definition>
+        <argsstring>(socket &amp;&amp;sock, socket &amp;&amp;dst)</argsstring>
+        <name>SocksSession</name>
+        <param>
+          <type><ref refid="namespaceseraphim_1a98076410a07d2454c5f735f83cdc0552" kindref="member">socket</ref> &amp;&amp;</type>
+          <declname>sock</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceseraphim_1a98076410a07d2454c5f735f83cdc0552" kindref="member">socket</ref> &amp;&amp;</type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/socks_session.h" line="12" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/socks_session.h" bodystart="12" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classseraphim_1_1_socks_session_1a778847bae6d7f84e5462887788251220" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual seraphim::SocksSession::~SocksSession</definition>
+        <argsstring>()</argsstring>
+        <name>~SocksSession</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/socks_session.h" line="15" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/socks_session.h" bodystart="15" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classseraphim_1_1_socks_session_1a0fc90f353862f64c3044d2a5b80ac86f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void seraphim::SocksSession::traffic</definition>
+        <argsstring>()</argsstring>
+        <name>traffic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/socks_session.h" line="17" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/socks_session.cpp" bodystart="4" bodyend="10"/>
+        <references refid="classseraphim_1_1_socks_session_1a415588a3e1366e3404a18754802207fd" compoundref="socks__session_8cpp" startline="19" endline="69">handshake_type</references>
+        <references refid="classseraphim_1_1_socks_session_1ae0644647de7c5471fbe34eae24b9c507" compoundref="socks__session_8h" startline="29">l_sock_</references>
+        <references refid="classseraphim_1_1_socks_session_1a21f1128604870fb25ef3672533cf6a1a" compoundref="socks__session_8h" startline="32">rbuf_</references>
+        <references refid="classseraphim_1_1_socks_session_1a082ef0bf714bc5fd933baa7a4902acf0" compoundref="socks__session_8h" startline="33">self_</references>
+      </memberdef>
+      <memberdef kind="function" id="classseraphim_1_1_socks_session_1a1d4a5a74631f042a758d9450460d71c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void seraphim::SocksSession::band</definition>
+        <argsstring>(const error_code &amp;ec)</argsstring>
+        <name>band</name>
+        <param>
+          <type>const error_code &amp;</type>
+          <declname>ec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/socks_session.h" line="18" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/socks_session.cpp" bodystart="12" bodyend="17"/>
+        <references refid="classseraphim_1_1_socks_session_1ae0644647de7c5471fbe34eae24b9c507" compoundref="socks__session_8h" startline="29">l_sock_</references>
+        <references refid="classseraphim_1_1_socks_session_1ae00e15d3bb88bb868821961788443c9b" compoundref="socks__session_8h" startline="31">r_sock_</references>
+        <references refid="classseraphim_1_1_socks_session_1a082ef0bf714bc5fd933baa7a4902acf0" compoundref="socks__session_8h" startline="33">self_</references>
+        <referencedby refid="classseraphim_1_1_socks_session_1a415588a3e1366e3404a18754802207fd" compoundref="socks__session_8cpp" startline="19" endline="69">handshake_type</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classseraphim_1_1_socks_session_1a415588a3e1366e3404a18754802207fd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void seraphim::SocksSession::handshake_type</definition>
+        <argsstring>(const error_code &amp;ec, size_t len)</argsstring>
+        <name>handshake_type</name>
+        <param>
+          <type>const error_code &amp;</type>
+          <declname>ec</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/socks_session.h" line="20" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/socks_session.cpp" bodystart="19" bodyend="69"/>
+        <references refid="classseraphim_1_1_socks_session_1a1d4a5a74631f042a758d9450460d71c1" compoundref="socks__session_8cpp" startline="12" endline="17">band</references>
+        <references refid="classseraphim_1_1_byte_i_stream_1a15a936f4ff2481670b40c48e05a5f0c3" compoundref="common_8h" startline="86" endline="96">seraphim::ByteIStream::getN</references>
+        <references refid="classseraphim_1_1_socks_session_1a06ed1723dc0eeea73d97ba6a65ce491f" compoundref="socks__session_8cpp" startline="76" endline="79">handshake_host</references>
+        <references refid="classseraphim_1_1_socks_session_1a047b575b927bdc012f80474e797f2c4a" compoundref="socks__session_8cpp" startline="71" endline="74">handshake_ipv4</references>
+        <references refid="classseraphim_1_1_socks_session_1ae0644647de7c5471fbe34eae24b9c507" compoundref="socks__session_8h" startline="29">l_sock_</references>
+        <references refid="classseraphim_1_1_byte_o_stream_1ac8b400ea62cf7e345148bf36e7692c92" compoundref="common_8h" startline="39" endline="46">seraphim::ByteOStream::putN</references>
+        <references refid="classseraphim_1_1_socks_session_1a21f1128604870fb25ef3672533cf6a1a" compoundref="socks__session_8h" startline="32">rbuf_</references>
+        <referencedby refid="classseraphim_1_1_socks_session_1a0fc90f353862f64c3044d2a5b80ac86f" compoundref="socks__session_8cpp" startline="4" endline="10">traffic</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classseraphim_1_1_socks_session_1a047b575b927bdc012f80474e797f2c4a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void seraphim::SocksSession::handshake_ipv4</definition>
+        <argsstring>(const error_code &amp;ec, size_t len)</argsstring>
+        <name>handshake_ipv4</name>
+        <param>
+          <type>const error_code &amp;</type>
+          <declname>ec</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/socks_session.h" line="21" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/socks_session.cpp" bodystart="71" bodyend="74"/>
+        <referencedby refid="classseraphim_1_1_socks_session_1a415588a3e1366e3404a18754802207fd" compoundref="socks__session_8cpp" startline="19" endline="69">handshake_type</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classseraphim_1_1_socks_session_1a06ed1723dc0eeea73d97ba6a65ce491f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void seraphim::SocksSession::handshake_host</definition>
+        <argsstring>(const error_code &amp;ec, size_t len)</argsstring>
+        <name>handshake_host</name>
+        <param>
+          <type>const error_code &amp;</type>
+          <declname>ec</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/socks_session.h" line="22" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/socks_session.cpp" bodystart="76" bodyend="79"/>
+        <referencedby refid="classseraphim_1_1_socks_session_1a415588a3e1366e3404a18754802207fd" compoundref="socks__session_8cpp" startline="19" endline="69">handshake_type</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classseraphim_1_1_socks_session_1a45dce24e11a0e7fce676fce8b2505ec5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void seraphim::SocksSession::handshake_resolve</definition>
+        <argsstring>(shared_ptr&lt; ip::tcp::resolver &gt; resolver, const error_code &amp;ec, ip::tcp::resolver::iterator itr)</argsstring>
+        <name>handshake_resolve</name>
+        <param>
+          <type>shared_ptr&lt; ip::tcp::resolver &gt;</type>
+          <declname>resolver</declname>
+        </param>
+        <param>
+          <type>const error_code &amp;</type>
+          <declname>ec</declname>
+        </param>
+        <param>
+          <type>ip::tcp::resolver::iterator</type>
+          <declname>itr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/socks_session.h" line="23" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/socks_session.cpp" bodystart="81" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classseraphim_1_1_socks_session_1a69b4f92bbf5e6ab8d81ccb640d699460" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void seraphim::SocksSession::handshake_port</definition>
+        <argsstring>(const error_code &amp;ec, size_t len)</argsstring>
+        <name>handshake_port</name>
+        <param>
+          <type>const error_code &amp;</type>
+          <declname>ec</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/socks_session.h" line="24" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/socks_session.cpp" bodystart="86" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classseraphim_1_1_socks_session_1ac0da23634eb8ae807985aa9a8ff3be9d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void seraphim::SocksSession::handshake_error</definition>
+        <argsstring>(const error_code &amp;ec)</argsstring>
+        <name>handshake_error</name>
+        <param>
+          <type>const error_code &amp;</type>
+          <declname>ec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/socks_session.h" line="25" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/socks_session.cpp" bodystart="91" bodyend="94"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="7">
+        <label>std::enable_shared_from_this&lt; SocksSession &gt;</label>
+      </node>
+      <node id="6">
+        <label>seraphim::SocksSession</label>
+        <link refid="classseraphim_1_1_socks_session"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10">
+        <label>shared_ptr&lt; seraphim::SocksSession &gt;</label>
+      </node>
+      <node id="9">
+        <label>std::enable_shared_from_this&lt; SocksSession &gt;</label>
+      </node>
+      <node id="8">
+        <label>seraphim::SocksSession</label>
+        <link refid="classseraphim_1_1_socks_session"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>self_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/CODE/SocksBridge/SocksBridge/socks_session.h" line="6" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/socks_session.h" bodystart="6" bodyend="36"/>
+    <listofallmembers>
+      <member refid="classseraphim_1_1_socks_session_1a1d4a5a74631f042a758d9450460d71c1" prot="public" virt="non-virtual"><scope>seraphim::SocksSession</scope><name>band</name></member>
+      <member refid="classseraphim_1_1_socks_session_1ac0da23634eb8ae807985aa9a8ff3be9d" prot="private" virt="non-virtual"><scope>seraphim::SocksSession</scope><name>handshake_error</name></member>
+      <member refid="classseraphim_1_1_socks_session_1a06ed1723dc0eeea73d97ba6a65ce491f" prot="private" virt="non-virtual"><scope>seraphim::SocksSession</scope><name>handshake_host</name></member>
+      <member refid="classseraphim_1_1_socks_session_1a047b575b927bdc012f80474e797f2c4a" prot="private" virt="non-virtual"><scope>seraphim::SocksSession</scope><name>handshake_ipv4</name></member>
+      <member refid="classseraphim_1_1_socks_session_1a69b4f92bbf5e6ab8d81ccb640d699460" prot="private" virt="non-virtual"><scope>seraphim::SocksSession</scope><name>handshake_port</name></member>
+      <member refid="classseraphim_1_1_socks_session_1a45dce24e11a0e7fce676fce8b2505ec5" prot="private" virt="non-virtual"><scope>seraphim::SocksSession</scope><name>handshake_resolve</name></member>
+      <member refid="classseraphim_1_1_socks_session_1a415588a3e1366e3404a18754802207fd" prot="private" virt="non-virtual"><scope>seraphim::SocksSession</scope><name>handshake_type</name></member>
+      <member refid="classseraphim_1_1_socks_session_1ae0644647de7c5471fbe34eae24b9c507" prot="private" virt="non-virtual"><scope>seraphim::SocksSession</scope><name>l_sock_</name></member>
+      <member refid="classseraphim_1_1_socks_session_1ae00e15d3bb88bb868821961788443c9b" prot="private" virt="non-virtual"><scope>seraphim::SocksSession</scope><name>r_sock_</name></member>
+      <member refid="classseraphim_1_1_socks_session_1a21f1128604870fb25ef3672533cf6a1a" prot="private" virt="non-virtual"><scope>seraphim::SocksSession</scope><name>rbuf_</name></member>
+      <member refid="classseraphim_1_1_socks_session_1a082ef0bf714bc5fd933baa7a4902acf0" prot="private" virt="non-virtual"><scope>seraphim::SocksSession</scope><name>self_</name></member>
+      <member refid="classseraphim_1_1_socks_session_1a54cf23bd5994c6cd01b4642e55d6721e" prot="public" virt="non-virtual"><scope>seraphim::SocksSession</scope><name>SocksSession</name></member>
+      <member refid="classseraphim_1_1_socks_session_1a33d6e44934be12996bf9861353e7d1d8" prot="public" virt="non-virtual"><scope>seraphim::SocksSession</scope><name>SocksSession</name></member>
+      <member refid="classseraphim_1_1_socks_session_1a0fc90f353862f64c3044d2a5b80ac86f" prot="public" virt="non-virtual"><scope>seraphim::SocksSession</scope><name>traffic</name></member>
+      <member refid="classseraphim_1_1_socks_session_1a778847bae6d7f84e5462887788251220" prot="public" virt="virtual"><scope>seraphim::SocksSession</scope><name>~SocksSession</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.6">
+  <compound refid="classseraphim_1_1_byte_i_stream" kind="class"><name>seraphim::ByteIStream</name>
+    <member refid="classseraphim_1_1_byte_i_stream_1a0f42b6759ec2c6cb41af5e9a0d769509" kind="variable"><name>buf_</name></member>
+    <member refid="classseraphim_1_1_byte_i_stream_1a391caedd89477fff0ce57bec5b514e59" kind="variable"><name>offset_</name></member>
+    <member refid="classseraphim_1_1_byte_i_stream_1ad162a005c817c80044e8c4a568b75590" kind="variable"><name>max_len</name></member>
+    <member refid="classseraphim_1_1_byte_i_stream_1a12d056980b32d1e72f0c754bb0cc2bc3" kind="function"><name>ByteIStream</name></member>
+    <member refid="classseraphim_1_1_byte_i_stream_1acc40e90c02d31cabf0ea418b786e237b" kind="function"><name>get</name></member>
+    <member refid="classseraphim_1_1_byte_i_stream_1a15a936f4ff2481670b40c48e05a5f0c3" kind="function"><name>getN</name></member>
+    <member refid="classseraphim_1_1_byte_i_stream_1afee051b01b71cea445956c33853cb446" kind="function"><name>get_array</name></member>
+    <member refid="classseraphim_1_1_byte_i_stream_1a5649643de880d6833585f7702f5f561b" kind="function"><name>reset</name></member>
+  </compound>
+  <compound refid="classseraphim_1_1_byte_o_stream" kind="class"><name>seraphim::ByteOStream</name>
+    <member refid="classseraphim_1_1_byte_o_stream_1a31cc76445a7ca34308197c207c3d7937" kind="variable"><name>buf_</name></member>
+    <member refid="classseraphim_1_1_byte_o_stream_1a851941a733dffe1d9c31678fd2e2443e" kind="variable"><name>max_size_</name></member>
+    <member refid="classseraphim_1_1_byte_o_stream_1a2743916e283fb7d703cc948395cc9b8c" kind="variable"><name>offset_</name></member>
+    <member refid="classseraphim_1_1_byte_o_stream_1af6e6c29fb1e7a63c062e60be6cfd9ca8" kind="function"><name>ByteOStream</name></member>
+    <member refid="classseraphim_1_1_byte_o_stream_1a3e3c402d0e51e4e1397160ead0a67f2e" kind="function"><name>put</name></member>
+    <member refid="classseraphim_1_1_byte_o_stream_1ac8b400ea62cf7e345148bf36e7692c92" kind="function"><name>putN</name></member>
+    <member refid="classseraphim_1_1_byte_o_stream_1a1fac35b1ee3af85ee45671d3fd114e44" kind="function"><name>put_arry</name></member>
+    <member refid="classseraphim_1_1_byte_o_stream_1a8d74132caf146df23424199178a5a562" kind="function"><name>put_arry</name></member>
+    <member refid="classseraphim_1_1_byte_o_stream_1a7887cdedd9ecf481b8df76870fe5e2e6" kind="function"><name>reset</name></member>
+  </compound>
+  <compound refid="classseraphim_1_1_socks_birdge" kind="class"><name>seraphim::SocksBirdge</name>
+    <member refid="classseraphim_1_1_socks_birdge_1a82b75e8d4de3901b5908c81cfdfde9a0" kind="variable"><name>ios_</name></member>
+    <member refid="classseraphim_1_1_socks_birdge_1a50077724dac76896d9d206df955e8900" kind="variable"><name>acceptor_</name></member>
+    <member refid="classseraphim_1_1_socks_birdge_1a8eed06b235ccfc3c3ca482dafc986a47" kind="variable"><name>from_</name></member>
+    <member refid="classseraphim_1_1_socks_birdge_1a440de77f5c42f1e051e13526d0a1c63b" kind="variable"><name>to_</name></member>
+    <member refid="classseraphim_1_1_socks_birdge_1a9adecf5b7659a63e7f3d0189a94e833f" kind="function"><name>SocksBirdge</name></member>
+    <member refid="classseraphim_1_1_socks_birdge_1a964020b45265e28de91b993d106e90bf" kind="function"><name>SocksBirdge</name></member>
+    <member refid="classseraphim_1_1_socks_birdge_1a6ac1c46f907f1e299a44d62d8c9a1404" kind="function"><name>start_forever</name></member>
+    <member refid="classseraphim_1_1_socks_birdge_1a3e8c839465d14afddf62b62201e67dde" kind="function"><name>accetp_handler</name></member>
+    <member refid="classseraphim_1_1_socks_birdge_1a858e0cf68b2ed4463ccb65d8d6d77ef0" kind="function"><name>new_session</name></member>
+  </compound>
+  <compound refid="classseraphim_1_1_socks_session" kind="class"><name>seraphim::SocksSession</name>
+    <member refid="classseraphim_1_1_socks_session_1ae0644647de7c5471fbe34eae24b9c507" kind="variable"><name>l_sock_</name></member>
+    <member refid="classseraphim_1_1_socks_session_1ae00e15d3bb88bb868821961788443c9b" kind="variable"><name>r_sock_</name></member>
+    <member refid="classseraphim_1_1_socks_session_1a21f1128604870fb25ef3672533cf6a1a" kind="variable"><name>rbuf_</name></member>
+    <member refid="classseraphim_1_1_socks_session_1a082ef0bf714bc5fd933baa7a4902acf0" kind="variable"><name>self_</name></member>
+    <member refid="classseraphim_1_1_socks_session_1a54cf23bd5994c6cd01b4642e55d6721e" kind="function"><name>SocksSession</name></member>
+    <member refid="classseraphim_1_1_socks_session_1a33d6e44934be12996bf9861353e7d1d8" kind="function"><name>SocksSession</name></member>
+    <member refid="classseraphim_1_1_socks_session_1a778847bae6d7f84e5462887788251220" kind="function"><name>~SocksSession</name></member>
+    <member refid="classseraphim_1_1_socks_session_1a0fc90f353862f64c3044d2a5b80ac86f" kind="function"><name>traffic</name></member>
+    <member refid="classseraphim_1_1_socks_session_1a1d4a5a74631f042a758d9450460d71c1" kind="function"><name>band</name></member>
+    <member refid="classseraphim_1_1_socks_session_1a415588a3e1366e3404a18754802207fd" kind="function"><name>handshake_type</name></member>
+    <member refid="classseraphim_1_1_socks_session_1a047b575b927bdc012f80474e797f2c4a" kind="function"><name>handshake_ipv4</name></member>
+    <member refid="classseraphim_1_1_socks_session_1a06ed1723dc0eeea73d97ba6a65ce491f" kind="function"><name>handshake_host</name></member>
+    <member refid="classseraphim_1_1_socks_session_1a45dce24e11a0e7fce676fce8b2505ec5" kind="function"><name>handshake_resolve</name></member>
+    <member refid="classseraphim_1_1_socks_session_1a69b4f92bbf5e6ab8d81ccb640d699460" kind="function"><name>handshake_port</name></member>
+    <member refid="classseraphim_1_1_socks_session_1ac0da23634eb8ae807985aa9a8ff3be9d" kind="function"><name>handshake_error</name></member>
+  </compound>
+  <compound refid="namespaceboost_1_1asio" kind="namespace"><name>boost::asio</name>
+  </compound>
+  <compound refid="namespaceseraphim" kind="namespace"><name>seraphim</name>
+    <member refid="namespaceseraphim_1a039abc666dcc43b519445191a75f5156" kind="typedef"><name>endpoint</name></member>
+    <member refid="namespaceseraphim_1a98076410a07d2454c5f735f83cdc0552" kind="typedef"><name>socket</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="common_8h" kind="file"><name>common.h</name>
+  </compound>
+  <compound refid="_hub_win_8cpp" kind="file"><name>HubWin.cpp</name>
+    <member refid="_hub_win_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="socks__birdge_8cpp" kind="file"><name>socks_birdge.cpp</name>
+  </compound>
+  <compound refid="socks__birdge_8h" kind="file"><name>socks_birdge.h</name>
+  </compound>
+  <compound refid="socks__session_8cpp" kind="file"><name>socks_session.cpp</name>
+  </compound>
+  <compound refid="socks__session_8h" kind="file"><name>socks_session.h</name>
+  </compound>
+  <compound refid="_socks_bridge_8cpp" kind="file"><name>SocksBridge.cpp</name>
+    <member refid="_socks_bridge_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="stdafx_8cpp" kind="file"><name>stdafx.cpp</name>
+  </compound>
+  <compound refid="stdafx_8h" kind="file"><name>stdafx.h</name>
+  </compound>
+  <compound refid="targetver_8h" kind="file"><name>targetver.h</name>
+  </compound>
+  <compound refid="dir_0c717964e906cb3c8d6ecb94b7a6ffc2" kind="dir"><name>D:/CODE</name>
+  </compound>
+  <compound refid="dir_199308abd192ae10773d9771eeb338d3" kind="dir"><name>D:/CODE/SocksBridge/SocksBridge</name>
+  </compound>
+  <compound refid="dir_539de177ed2134493903524bfd7394e3" kind="dir"><name>D:/CODE/SocksBridge</name>
+  </compound>
+</doxygenindex>

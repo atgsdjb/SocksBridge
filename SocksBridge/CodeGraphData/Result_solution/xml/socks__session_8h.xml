@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="socks__session_8h" kind="file">
+    <compoundname>socks_session.h</compoundname>
+    <includes refid="common_8h" local="yes">common.h</includes>
+    <includes local="no">boost/asio.hpp</includes>
+    <includedby refid="socks__birdge_8cpp" local="yes">D:/CODE/SocksBridge/SocksBridge/socks_birdge.cpp</includedby>
+    <includedby refid="socks__session_8cpp" local="yes">D:/CODE/SocksBridge/SocksBridge/socks_session.cpp</includedby>
+    <incdepgraph>
+      <node id="80">
+        <label>boost/asio/ip/address.hpp</label>
+      </node>
+      <node id="81">
+        <label>boost/asio/io_service.hpp</label>
+      </node>
+      <node id="76">
+        <label>string</label>
+      </node>
+      <node id="74">
+        <label>D:/CODE/SocksBridge/SocksBridge/socks_session.h</label>
+        <link refid="socks_session.h"/>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+      </node>
+      <node id="82">
+        <label>boost/shared_array.hpp</label>
+      </node>
+      <node id="75">
+        <label>common.h</label>
+        <link refid="common_8h"/>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+      </node>
+      <node id="83">
+        <label>boost/asio.hpp</label>
+      </node>
+      <node id="78">
+        <label>boost/system/error_code.hpp</label>
+      </node>
+      <node id="79">
+        <label>boost/asio/ip/tcp.hpp</label>
+      </node>
+      <node id="77">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="86">
+        <label>D:/CODE/SocksBridge/SocksBridge/socks_session.cpp</label>
+        <link refid="socks__session_8cpp"/>
+      </node>
+      <node id="84">
+        <label>D:/CODE/SocksBridge/SocksBridge/socks_session.h</label>
+        <link refid="socks_session.h"/>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+      </node>
+      <node id="85">
+        <label>D:/CODE/SocksBridge/SocksBridge/socks_birdge.cpp</label>
+        <link refid="socks__birdge_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classseraphim_1_1_socks_session" prot="public">seraphim::SocksSession</innerclass>
+    <innernamespace refid="namespaceseraphim">seraphim</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include&quot;<ref refid="common_8h" kindref="compound">common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;boost/asio.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">seraphim<sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">boost::asio;</highlight></codeline>
+<codeline lineno="6" refid="classseraphim_1_1_socks_session" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classseraphim_1_1_socks_session" kindref="compound">SocksSession</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::enable_shared_from_this&lt;SocksSession&gt;{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="8" refid="classseraphim_1_1_socks_session_1a54cf23bd5994c6cd01b4642e55d6721e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classseraphim_1_1_socks_session_1a54cf23bd5994c6cd01b4642e55d6721e" kindref="member">SocksSession</ref>(<ref refid="namespaceseraphim_1a98076410a07d2454c5f735f83cdc0552" kindref="member">socket</ref>&amp;&amp;<sp/>sock,<ref refid="namespaceseraphim_1a039abc666dcc43b519445191a75f5156" kindref="member">endpoint</ref><sp/>dst_end):l_sock_(std::move(sock)),r_sock_(sock.get_io_service())</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r_sock_.bind(dst_end);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="12" refid="classseraphim_1_1_socks_session_1a33d6e44934be12996bf9861353e7d1d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classseraphim_1_1_socks_session_1a33d6e44934be12996bf9861353e7d1d8" kindref="member">SocksSession</ref>(<ref refid="namespaceseraphim_1a98076410a07d2454c5f735f83cdc0552" kindref="member">socket</ref>&amp;&amp;<sp/>sock,<sp/><ref refid="namespaceseraphim_1a98076410a07d2454c5f735f83cdc0552" kindref="member">socket</ref>&amp;&amp;<sp/>dst)<sp/>:l_sock_(std::move(sock)),<sp/>r_sock_(std::move(dst))<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="15" refid="classseraphim_1_1_socks_session_1a778847bae6d7f84e5462887788251220" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classseraphim_1_1_socks_session_1a778847bae6d7f84e5462887788251220" kindref="member">~SocksSession</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>traffic();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>band(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>error_code&amp;<sp/>ec);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handshake_type(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>error_code&amp;<sp/>ec,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handshake_ipv4(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>error_code&amp;<sp/>ec,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handshake_host(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>error_code&amp;<sp/>ec,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handshake_resolve(shared_ptr&lt;ip::tcp::resolver&gt;<sp/>resolver,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>error_code&amp;<sp/>ec,<sp/>ip::tcp::resolver::iterator<sp/>itr);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handshake_port(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>error_code&amp;<sp/>ec,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handshake_error(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>error_code&amp;<sp/>ec);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//left<sp/>socket</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classseraphim_1_1_socks_session_1ae0644647de7c5471fbe34eae24b9c507" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceseraphim_1a98076410a07d2454c5f735f83cdc0552" kindref="member">ip::tcp::socket</ref><sp/><ref refid="classseraphim_1_1_socks_session_1ae0644647de7c5471fbe34eae24b9c507" kindref="member">l_sock_</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//right<sp/>socket</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classseraphim_1_1_socks_session_1ae00e15d3bb88bb868821961788443c9b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceseraphim_1a98076410a07d2454c5f735f83cdc0552" kindref="member">ip::tcp::socket</ref><sp/><ref refid="classseraphim_1_1_socks_session_1ae00e15d3bb88bb868821961788443c9b" kindref="member">r_sock_</ref>;</highlight></codeline>
+<codeline lineno="32" refid="classseraphim_1_1_socks_session_1a21f1128604870fb25ef3672533cf6a1a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>rbuf_[4096];</highlight></codeline>
+<codeline lineno="33" refid="classseraphim_1_1_socks_session_1a082ef0bf714bc5fd933baa7a4902acf0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shared_ptr&lt;SocksSession&gt;<sp/><ref refid="classseraphim_1_1_socks_session_1a082ef0bf714bc5fd933baa7a4902acf0" kindref="member">self_</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="D:/CODE/SocksBridge/SocksBridge/socks_session.h"/>
+  </compounddef>
+</doxygen>

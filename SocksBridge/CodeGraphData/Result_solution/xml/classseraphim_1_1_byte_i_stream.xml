@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classseraphim_1_1_byte_i_stream" kind="class" prot="public">
+    <compoundname>seraphim::ByteIStream</compoundname>
+    <includes refid="common_8h" local="no">common.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classseraphim_1_1_byte_i_stream_1a0f42b6759ec2c6cb41af5e9a0d769509" prot="private" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>uint8_t* seraphim::ByteIStream::buf_</definition>
+        <argsstring></argsstring>
+        <name>buf_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/common.h" line="66" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/common.h" bodystart="66" bodyend="-1"/>
+        <referencedby refid="classseraphim_1_1_byte_i_stream_1acc40e90c02d31cabf0ea418b786e237b" compoundref="common_8h" startline="75" endline="84">get</referencedby>
+        <referencedby refid="classseraphim_1_1_byte_i_stream_1afee051b01b71cea445956c33853cb446" compoundref="common_8h" startline="99" endline="102">get_array</referencedby>
+        <referencedby refid="classseraphim_1_1_byte_i_stream_1a15a936f4ff2481670b40c48e05a5f0c3" compoundref="common_8h" startline="86" endline="96">getN</referencedby>
+        <referencedby refid="classseraphim_1_1_byte_i_stream_1a5649643de880d6833585f7702f5f561b" compoundref="common_8h" startline="103" endline="106">reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classseraphim_1_1_byte_i_stream_1a391caedd89477fff0ce57bec5b514e59" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t seraphim::ByteIStream::offset_</definition>
+        <argsstring></argsstring>
+        <name>offset_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/common.h" line="67" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/common.h" bodystart="67" bodyend="-1"/>
+        <referencedby refid="classseraphim_1_1_byte_i_stream_1acc40e90c02d31cabf0ea418b786e237b" compoundref="common_8h" startline="75" endline="84">get</referencedby>
+        <referencedby refid="classseraphim_1_1_byte_i_stream_1afee051b01b71cea445956c33853cb446" compoundref="common_8h" startline="99" endline="102">get_array</referencedby>
+        <referencedby refid="classseraphim_1_1_byte_i_stream_1a15a936f4ff2481670b40c48e05a5f0c3" compoundref="common_8h" startline="86" endline="96">getN</referencedby>
+        <referencedby refid="classseraphim_1_1_byte_i_stream_1a5649643de880d6833585f7702f5f561b" compoundref="common_8h" startline="103" endline="106">reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classseraphim_1_1_byte_i_stream_1ad162a005c817c80044e8c4a568b75590" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t seraphim::ByteIStream::max_len</definition>
+        <argsstring></argsstring>
+        <name>max_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/common.h" line="68" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/common.h" bodystart="68" bodyend="-1"/>
+        <referencedby refid="classseraphim_1_1_byte_i_stream_1a5649643de880d6833585f7702f5f561b" compoundref="common_8h" startline="103" endline="106">reset</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classseraphim_1_1_byte_i_stream_1a12d056980b32d1e72f0c754bb0cc2bc3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>seraphim::ByteIStream::ByteIStream</definition>
+        <argsstring>(uint8_t *buf, size_t len)</argsstring>
+        <name>ByteIStream</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/common.h" line="70" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/common.h" bodystart="70" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classseraphim_1_1_byte_i_stream_1acc40e90c02d31cabf0ea418b786e237b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T seraphim::ByteIStream::get</definition>
+        <argsstring>()</argsstring>
+        <name>get</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/common.h" line="75" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/common.h" bodystart="75" bodyend="84"/>
+        <references refid="classseraphim_1_1_byte_i_stream_1a0f42b6759ec2c6cb41af5e9a0d769509" compoundref="common_8h" startline="66">buf_</references>
+        <references refid="classseraphim_1_1_byte_i_stream_1a391caedd89477fff0ce57bec5b514e59" compoundref="common_8h" startline="67">offset_</references>
+      </memberdef>
+      <memberdef kind="function" id="classseraphim_1_1_byte_i_stream_1a15a936f4ff2481670b40c48e05a5f0c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T seraphim::ByteIStream::getN</definition>
+        <argsstring>()</argsstring>
+        <name>getN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/common.h" line="86" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/common.h" bodystart="86" bodyend="96"/>
+        <references refid="classseraphim_1_1_byte_i_stream_1a0f42b6759ec2c6cb41af5e9a0d769509" compoundref="common_8h" startline="66">buf_</references>
+        <references refid="classseraphim_1_1_byte_i_stream_1a391caedd89477fff0ce57bec5b514e59" compoundref="common_8h" startline="67">offset_</references>
+        <referencedby refid="classseraphim_1_1_socks_session_1a415588a3e1366e3404a18754802207fd" compoundref="socks__session_8cpp" startline="19" endline="69">seraphim::SocksSession::handshake_type</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classseraphim_1_1_byte_i_stream_1afee051b01b71cea445956c33853cb446" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void seraphim::ByteIStream::get_array</definition>
+        <argsstring>(T *dst, size_t len)</argsstring>
+        <name>get_array</name>
+        <param>
+          <type>T *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/common.h" line="99" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/common.h" bodystart="99" bodyend="102"/>
+        <references refid="classseraphim_1_1_byte_i_stream_1a0f42b6759ec2c6cb41af5e9a0d769509" compoundref="common_8h" startline="66">buf_</references>
+        <references refid="classseraphim_1_1_byte_i_stream_1a391caedd89477fff0ce57bec5b514e59" compoundref="common_8h" startline="67">offset_</references>
+      </memberdef>
+      <memberdef kind="function" id="classseraphim_1_1_byte_i_stream_1a5649643de880d6833585f7702f5f561b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void seraphim::ByteIStream::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/common.h" line="103" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/common.h" bodystart="103" bodyend="106"/>
+        <references refid="classseraphim_1_1_byte_i_stream_1a0f42b6759ec2c6cb41af5e9a0d769509" compoundref="common_8h" startline="66">buf_</references>
+        <references refid="classseraphim_1_1_byte_i_stream_1ad162a005c817c80044e8c4a568b75590" compoundref="common_8h" startline="68">max_len</references>
+        <references refid="classseraphim_1_1_byte_i_stream_1a391caedd89477fff0ce57bec5b514e59" compoundref="common_8h" startline="67">offset_</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/CODE/SocksBridge/SocksBridge/common.h" line="64" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/common.h" bodystart="64" bodyend="107"/>
+    <listofallmembers>
+      <member refid="classseraphim_1_1_byte_i_stream_1a0f42b6759ec2c6cb41af5e9a0d769509" prot="private" virt="non-virtual"><scope>seraphim::ByteIStream</scope><name>buf_</name></member>
+      <member refid="classseraphim_1_1_byte_i_stream_1a12d056980b32d1e72f0c754bb0cc2bc3" prot="public" virt="non-virtual"><scope>seraphim::ByteIStream</scope><name>ByteIStream</name></member>
+      <member refid="classseraphim_1_1_byte_i_stream_1acc40e90c02d31cabf0ea418b786e237b" prot="public" virt="non-virtual"><scope>seraphim::ByteIStream</scope><name>get</name></member>
+      <member refid="classseraphim_1_1_byte_i_stream_1afee051b01b71cea445956c33853cb446" prot="public" virt="non-virtual"><scope>seraphim::ByteIStream</scope><name>get_array</name></member>
+      <member refid="classseraphim_1_1_byte_i_stream_1a15a936f4ff2481670b40c48e05a5f0c3" prot="public" virt="non-virtual"><scope>seraphim::ByteIStream</scope><name>getN</name></member>
+      <member refid="classseraphim_1_1_byte_i_stream_1ad162a005c817c80044e8c4a568b75590" prot="private" virt="non-virtual"><scope>seraphim::ByteIStream</scope><name>max_len</name></member>
+      <member refid="classseraphim_1_1_byte_i_stream_1a391caedd89477fff0ce57bec5b514e59" prot="private" virt="non-virtual"><scope>seraphim::ByteIStream</scope><name>offset_</name></member>
+      <member refid="classseraphim_1_1_byte_i_stream_1a5649643de880d6833585f7702f5f561b" prot="public" virt="non-virtual"><scope>seraphim::ByteIStream</scope><name>reset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

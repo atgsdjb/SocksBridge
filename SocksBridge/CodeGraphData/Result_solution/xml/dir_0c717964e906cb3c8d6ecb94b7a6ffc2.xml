@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_0c717964e906cb3c8d6ecb94b7a6ffc2" kind="dir">
+    <compoundname>D:/CODE</compoundname>
+    <innerdir refid="dir_539de177ed2134493903524bfd7394e3">D:/CODE/SocksBridge</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/CODE/"/>
+  </compounddef>
+</doxygen>

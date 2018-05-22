@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespaceseraphim" kind="namespace">
+    <compoundname>seraphim</compoundname>
+    <innerclass refid="classseraphim_1_1_byte_o_stream" prot="public">seraphim::ByteOStream</innerclass>
+    <innerclass refid="classseraphim_1_1_byte_i_stream" prot="public">seraphim::ByteIStream</innerclass>
+    <innerclass refid="classseraphim_1_1_socks_birdge" prot="public">seraphim::SocksBirdge</innerclass>
+    <innerclass refid="classseraphim_1_1_socks_session" prot="public">seraphim::SocksSession</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespaceseraphim_1a039abc666dcc43b519445191a75f5156" prot="public" static="no">
+        <type>boost::asio::ip::basic_endpoint&lt; boost::asio::ip::tcp &gt;</type>
+        <definition>using seraphim::endpoint = typedef boost::asio::ip::basic_endpoint&lt;boost::asio::ip::tcp&gt;</definition>
+        <argsstring></argsstring>
+        <name>endpoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/common.h" line="14" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/common.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceseraphim_1a98076410a07d2454c5f735f83cdc0552" prot="public" static="no">
+        <type>boost::asio::ip::tcp::socket</type>
+        <definition>using seraphim::socket = typedef boost::asio::ip::tcp::socket</definition>
+        <argsstring></argsstring>
+        <name>socket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/common.h" line="15" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/common.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/CODE/SocksBridge/SocksBridge/common.h" line="9" column="1"/>
+  </compounddef>
+</doxygen>

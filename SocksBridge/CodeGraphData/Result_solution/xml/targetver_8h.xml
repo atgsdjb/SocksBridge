@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="targetver_8h" kind="file">
+    <compoundname>targetver.h</compoundname>
+    <includes local="no">SDKDDKVer.h</includes>
+    <includedby refid="stdafx_8h" local="yes">D:/CODE/SocksBridge/SocksBridge/stdafx.h</includedby>
+    <incdepgraph>
+      <node id="124">
+        <label>D:/CODE/SocksBridge/SocksBridge/targetver.h</label>
+        <link refid="targetver.h"/>
+        <childnode refid="125" relation="include">
+        </childnode>
+      </node>
+      <node id="125">
+        <label>SDKDDKVer.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="126">
+        <label>D:/CODE/SocksBridge/SocksBridge/targetver.h</label>
+        <link refid="targetver.h"/>
+        <childnode refid="127" relation="include">
+        </childnode>
+      </node>
+      <node id="127">
+        <label>D:/CODE/SocksBridge/SocksBridge/stdafx.h</label>
+        <link refid="stdafx_8h"/>
+        <childnode refid="128" relation="include">
+        </childnode>
+        <childnode refid="129" relation="include">
+        </childnode>
+        <childnode refid="130" relation="include">
+        </childnode>
+      </node>
+      <node id="130">
+        <label>D:/CODE/SocksBridge/SocksBridge/stdafx.cpp</label>
+        <link refid="stdafx_8cpp"/>
+      </node>
+      <node id="128">
+        <label>D:/CODE/SocksBridge/SocksBridge/HubWin.cpp</label>
+        <link refid="_hub_win_8cpp"/>
+      </node>
+      <node id="129">
+        <label>D:/CODE/SocksBridge/SocksBridge/SocksBridge.cpp</label>
+        <link refid="_socks_bridge_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Including<sp/>SDKDDKVer.h<sp/>defines<sp/>the<sp/>highest<sp/>available<sp/>Windows<sp/>platform.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>If<sp/>you<sp/>wish<sp/>to<sp/>build<sp/>your<sp/>application<sp/>for<sp/>a<sp/>previous<sp/>Windows<sp/>platform,<sp/>include<sp/>WinSDKVer.h<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>_WIN32_WINNT<sp/>macro<sp/>to<sp/>the<sp/>platform<sp/>you<sp/>wish<sp/>to<sp/>support<sp/>before<sp/>including<sp/>SDKDDKVer.h.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SDKDDKVer.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="D:/CODE/SocksBridge/SocksBridge/targetver.h"/>
+  </compounddef>
+</doxygen>

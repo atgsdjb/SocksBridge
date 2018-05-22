@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classseraphim_1_1_socks_birdge" kind="class" prot="public">
+    <compoundname>seraphim::SocksBirdge</compoundname>
+    <includes refid="socks__birdge_8h" local="no">socks_birdge.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classseraphim_1_1_socks_birdge_1a82b75e8d4de3901b5908c81cfdfde9a0" prot="private" static="no" mutable="no">
+        <type>io_service</type>
+        <definition>io_service seraphim::SocksBirdge::ios_</definition>
+        <argsstring></argsstring>
+        <name>ios_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/socks_birdge.h" line="13" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/socks_birdge.h" bodystart="13" bodyend="-1"/>
+        <referencedby refid="classseraphim_1_1_socks_birdge_1a3e8c839465d14afddf62b62201e67dde" compoundref="socks__birdge_8cpp" startline="33" endline="38">accetp_handler</referencedby>
+        <referencedby refid="classseraphim_1_1_socks_birdge_1a6ac1c46f907f1e299a44d62d8c9a1404" compoundref="socks__birdge_8cpp" startline="20" endline="31">start_forever</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classseraphim_1_1_socks_birdge_1a50077724dac76896d9d206df955e8900" prot="private" static="no" mutable="no">
+        <type>boost::asio::ip::tcp::acceptor</type>
+        <definition>boost::asio::ip::tcp::acceptor seraphim::SocksBirdge::acceptor_</definition>
+        <argsstring></argsstring>
+        <name>acceptor_</name>
+        <initializer>{<ref refid="classseraphim_1_1_socks_birdge_1a82b75e8d4de3901b5908c81cfdfde9a0" kindref="member">ios_</ref>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/socks_birdge.h" line="14" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/socks_birdge.h" bodystart="14" bodyend="-1"/>
+        <referencedby refid="classseraphim_1_1_socks_birdge_1a3e8c839465d14afddf62b62201e67dde" compoundref="socks__birdge_8cpp" startline="33" endline="38">accetp_handler</referencedby>
+        <referencedby refid="classseraphim_1_1_socks_birdge_1a6ac1c46f907f1e299a44d62d8c9a1404" compoundref="socks__birdge_8cpp" startline="20" endline="31">start_forever</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classseraphim_1_1_socks_birdge_1a8eed06b235ccfc3c3ca482dafc986a47" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceseraphim_1a039abc666dcc43b519445191a75f5156" kindref="member">endpoint</ref></type>
+        <definition>endpoint seraphim::SocksBirdge::from_</definition>
+        <argsstring></argsstring>
+        <name>from_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/socks_birdge.h" line="15" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/socks_birdge.h" bodystart="15" bodyend="-1"/>
+        <referencedby refid="classseraphim_1_1_socks_birdge_1a6ac1c46f907f1e299a44d62d8c9a1404" compoundref="socks__birdge_8cpp" startline="20" endline="31">start_forever</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classseraphim_1_1_socks_birdge_1a440de77f5c42f1e051e13526d0a1c63b" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceseraphim_1a039abc666dcc43b519445191a75f5156" kindref="member">endpoint</ref></type>
+        <definition>endpoint seraphim::SocksBirdge::to_</definition>
+        <argsstring></argsstring>
+        <name>to_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/socks_birdge.h" line="16" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/socks_birdge.h" bodystart="16" bodyend="-1"/>
+        <referencedby refid="classseraphim_1_1_socks_birdge_1a858e0cf68b2ed4463ccb65d8d6d77ef0" compoundref="socks__birdge_8cpp" startline="40" endline="45">new_session</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classseraphim_1_1_socks_birdge_1a9adecf5b7659a63e7f3d0189a94e833f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>seraphim::SocksBirdge::SocksBirdge</definition>
+        <argsstring>(const string &amp;form_ip, unsigned short form_port, const string &amp;to_ip, const unsigned to_port=0)</argsstring>
+        <name>SocksBirdge</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>form_ip</declname>
+        </param>
+        <param>
+          <type>unsigned short</type>
+          <declname>form_port</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>to_ip</declname>
+        </param>
+        <param>
+          <type>const unsigned</type>
+          <declname>to_port</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/socks_birdge.h" line="9" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/socks_birdge.cpp" bodystart="9" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classseraphim_1_1_socks_birdge_1a964020b45265e28de91b993d106e90bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>seraphim::SocksBirdge::SocksBirdge</definition>
+        <argsstring>(endpoint from, endpoint dst)</argsstring>
+        <name>SocksBirdge</name>
+        <param>
+          <type><ref refid="namespaceseraphim_1a039abc666dcc43b519445191a75f5156" kindref="member">endpoint</ref></type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceseraphim_1a039abc666dcc43b519445191a75f5156" kindref="member">endpoint</ref></type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/socks_birdge.h" line="10" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/socks_birdge.cpp" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classseraphim_1_1_socks_birdge_1a6ac1c46f907f1e299a44d62d8c9a1404" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void seraphim::SocksBirdge::start_forever</definition>
+        <argsstring>(unsigned short work_count)</argsstring>
+        <name>start_forever</name>
+        <param>
+          <type>unsigned short</type>
+          <declname>work_count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/socks_birdge.h" line="11" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/socks_birdge.cpp" bodystart="20" bodyend="31"/>
+        <references refid="classseraphim_1_1_socks_birdge_1a50077724dac76896d9d206df955e8900" compoundref="socks__birdge_8h" startline="14">acceptor_</references>
+        <references refid="classseraphim_1_1_socks_birdge_1a3e8c839465d14afddf62b62201e67dde" compoundref="socks__birdge_8cpp" startline="33" endline="38">accetp_handler</references>
+        <references refid="classseraphim_1_1_socks_birdge_1a8eed06b235ccfc3c3ca482dafc986a47" compoundref="socks__birdge_8h" startline="15">from_</references>
+        <references refid="classseraphim_1_1_socks_birdge_1a82b75e8d4de3901b5908c81cfdfde9a0" compoundref="socks__birdge_8h" startline="13">ios_</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classseraphim_1_1_socks_birdge_1a3e8c839465d14afddf62b62201e67dde" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void seraphim::SocksBirdge::accetp_handler</definition>
+        <argsstring>(const boost::system::error_code &amp;ec, boost::asio::ip::tcp::socket sock)</argsstring>
+        <name>accetp_handler</name>
+        <param>
+          <type>const boost::system::error_code &amp;</type>
+          <declname>ec</declname>
+        </param>
+        <param>
+          <type>boost::asio::ip::tcp::socket</type>
+          <declname>sock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/socks_birdge.h" line="18" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/socks_birdge.cpp" bodystart="33" bodyend="38"/>
+        <references refid="classseraphim_1_1_socks_birdge_1a50077724dac76896d9d206df955e8900" compoundref="socks__birdge_8h" startline="14">acceptor_</references>
+        <references refid="classseraphim_1_1_socks_birdge_1a82b75e8d4de3901b5908c81cfdfde9a0" compoundref="socks__birdge_8h" startline="13">ios_</references>
+        <references refid="classseraphim_1_1_socks_birdge_1a858e0cf68b2ed4463ccb65d8d6d77ef0" compoundref="socks__birdge_8cpp" startline="40" endline="45">new_session</references>
+        <referencedby refid="classseraphim_1_1_socks_birdge_1a6ac1c46f907f1e299a44d62d8c9a1404" compoundref="socks__birdge_8cpp" startline="20" endline="31">start_forever</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classseraphim_1_1_socks_birdge_1a858e0cf68b2ed4463ccb65d8d6d77ef0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void seraphim::SocksBirdge::new_session</definition>
+        <argsstring>(boost::asio::ip::tcp::socket &amp;&amp;sock)</argsstring>
+        <name>new_session</name>
+        <param>
+          <type>boost::asio::ip::tcp::socket &amp;&amp;</type>
+          <declname>sock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CODE/SocksBridge/SocksBridge/socks_birdge.h" line="19" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/socks_birdge.cpp" bodystart="40" bodyend="45"/>
+        <references refid="classseraphim_1_1_socks_birdge_1a440de77f5c42f1e051e13526d0a1c63b" compoundref="socks__birdge_8h" startline="16">to_</references>
+        <referencedby refid="classseraphim_1_1_socks_birdge_1a3e8c839465d14afddf62b62201e67dde" compoundref="socks__birdge_8cpp" startline="33" endline="38">accetp_handler</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/CODE/SocksBridge/SocksBridge/socks_birdge.h" line="7" column="1" bodyfile="D:/CODE/SocksBridge/SocksBridge/socks_birdge.h" bodystart="7" bodyend="22"/>
+    <listofallmembers>
+      <member refid="classseraphim_1_1_socks_birdge_1a50077724dac76896d9d206df955e8900" prot="private" virt="non-virtual"><scope>seraphim::SocksBirdge</scope><name>acceptor_</name></member>
+      <member refid="classseraphim_1_1_socks_birdge_1a3e8c839465d14afddf62b62201e67dde" prot="private" virt="non-virtual"><scope>seraphim::SocksBirdge</scope><name>accetp_handler</name></member>
+      <member refid="classseraphim_1_1_socks_birdge_1a8eed06b235ccfc3c3ca482dafc986a47" prot="private" virt="non-virtual"><scope>seraphim::SocksBirdge</scope><name>from_</name></member>
+      <member refid="classseraphim_1_1_socks_birdge_1a82b75e8d4de3901b5908c81cfdfde9a0" prot="private" virt="non-virtual"><scope>seraphim::SocksBirdge</scope><name>ios_</name></member>
+      <member refid="classseraphim_1_1_socks_birdge_1a858e0cf68b2ed4463ccb65d8d6d77ef0" prot="private" virt="non-virtual"><scope>seraphim::SocksBirdge</scope><name>new_session</name></member>
+      <member refid="classseraphim_1_1_socks_birdge_1a9adecf5b7659a63e7f3d0189a94e833f" prot="public" virt="non-virtual"><scope>seraphim::SocksBirdge</scope><name>SocksBirdge</name></member>
+      <member refid="classseraphim_1_1_socks_birdge_1a964020b45265e28de91b993d106e90bf" prot="public" virt="non-virtual"><scope>seraphim::SocksBirdge</scope><name>SocksBirdge</name></member>
+      <member refid="classseraphim_1_1_socks_birdge_1a6ac1c46f907f1e299a44d62d8c9a1404" prot="public" virt="non-virtual"><scope>seraphim::SocksBirdge</scope><name>start_forever</name></member>
+      <member refid="classseraphim_1_1_socks_birdge_1a440de77f5c42f1e051e13526d0a1c63b" prot="private" virt="non-virtual"><scope>seraphim::SocksBirdge</scope><name>to_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

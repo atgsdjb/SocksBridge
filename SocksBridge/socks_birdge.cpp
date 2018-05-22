@@ -42,7 +42,7 @@ namespace seraphim {
 	{
 		auto remote_endpoint = sock.remote_endpoint();
 		shared_ptr<SocksSession> session = std::make_shared<SocksSession>(std::move(sock), to_);
-		session->traffic();
+		session->start();
 	}
 
 };

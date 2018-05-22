@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_199308abd192ae10773d9771eeb338d3" kind="dir">
+    <compoundname>D:/CODE/SocksBridge/SocksBridge</compoundname>
+    <innerfile refid="common_8h">common.h</innerfile>
+    <innerfile refid="_hub_win_8cpp">HubWin.cpp</innerfile>
+    <innerfile refid="socks__birdge_8cpp">socks_birdge.cpp</innerfile>
+    <innerfile refid="socks__birdge_8h">socks_birdge.h</innerfile>
+    <innerfile refid="socks__session_8cpp">socks_session.cpp</innerfile>
+    <innerfile refid="socks__session_8h">socks_session.h</innerfile>
+    <innerfile refid="_socks_bridge_8cpp">SocksBridge.cpp</innerfile>
+    <innerfile refid="stdafx_8cpp">stdafx.cpp</innerfile>
+    <innerfile refid="stdafx_8h">stdafx.h</innerfile>
+    <innerfile refid="targetver_8h">targetver.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/CODE/SocksBridge/SocksBridge/"/>
+  </compounddef>
+</doxygen>
